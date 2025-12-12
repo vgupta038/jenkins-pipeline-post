@@ -17,19 +17,8 @@ pipeline {
         stage('Copy the web application to the container directory') {
             steps {
                 echo 'Copying web application...'             
-                sh 'docker cp -r shopping/. tomcat1:/home/jenkins/tomcat-web/shopping'
+                sh 'docker cp -r shopping/. tomcat1:/usr/local/tomcat/webapps'
             }
         }
     }
-
-    post {
-        success {
-        // One or more steps need to be included within each condition's block.
-        echo 'the deployment has worked'
-       }
-       failure {
-        // One or more steps need to be included within each condition's block.
-        echo 'An error has ocurred'
-      }
- }
 }
