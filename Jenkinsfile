@@ -17,7 +17,7 @@ pipeline {
         stage('Copy the web application to the container directory') {
             steps {
                 echo 'Copying web application...'             
-                sh 'docker cp -r shopping/. tomcat1:/usr/local/tomcat/webapps'
+                sh 'docker cp shopping/. tomcat1:/usr/local/tomcat/webapps'
             }
         }
     }
