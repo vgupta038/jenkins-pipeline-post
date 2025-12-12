@@ -2,7 +2,7 @@ pipeline {
     agent any
    
     stages {
-        stage('Create  directory for the WEB Application')
+        stage(' Create  directory for the WEB Application')
         {
             steps{
                
